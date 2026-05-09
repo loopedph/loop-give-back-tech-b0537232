@@ -308,11 +308,6 @@ function Product() {
             {shots.map((s) => (
               <CarouselItem key={s.title} className="pl-4 md:basis-4/5 lg:basis-3/4">
                 <div className="relative">
-                  <div
-                    aria-hidden
-                    className="absolute -inset-6 -z-10 rounded-[2rem] opacity-40 blur-2xl"
-                    style={{ background: "var(--gradient-hero)" }}
-                  />
                   <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-[var(--shadow-soft)]">
                     <img src={s.src} alt={s.title} className="w-full h-auto block" loading="lazy" />
                     <div className="p-6">
