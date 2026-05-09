@@ -423,8 +423,8 @@ function AdvisedBy() {
       <div className="absolute inset-0 -z-10 opacity-[0.05]" style={{ background: "var(--gradient-hero)" }} />
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4 inline-flex items-center gap-2">
-            <Sparkles className="h-4 w-4" /> Advised by
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4">
+            Advised by
           </p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] max-w-3xl mx-auto">
             Guided by leaders in{" "}
