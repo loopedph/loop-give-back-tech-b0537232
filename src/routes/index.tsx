@@ -362,15 +362,8 @@ function Packages() {
           {tiers.map((t) => (
             <div
               key={t.name}
-              className={`relative rounded-2xl border bg-card p-7 transition-[var(--transition-smooth)] hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] ${
-                t.highlight ? "border-primary" : "border-border"
-              }`}
+              className="relative rounded-2xl border border-border bg-card p-7 transition-[var(--transition-smooth)] hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
             >
-              {t.highlight && (
-                <div className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-0.5 text-xs font-medium text-primary-foreground">
-                  Most popular
-                </div>
-              )}
               <div className="text-xl font-semibold tracking-tight" style={{ color: "var(--primary)" }}>
                 {t.name}
               </div>
@@ -389,9 +382,20 @@ function Packages() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground text-center mt-6 italic">
-          *Other costs may be incurred — only the data wipe is free.
-        </p>
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
+            <a
+              href="https://forms.zohopublic.com/loopedloop1/form/LoopedITAMwaitlist/formperma/b47vRB4CrS-K4qJq8fpkZ4Z2fRZFq6M7pVFWiA-g8lU"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join the waitlist <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+          </Button>
+          <p className="text-xs text-muted-foreground text-center italic">
+            *Other costs may be incurred — only the data wipe is free.
+          </p>
+        </div>
       </div>
     </section>
   );
