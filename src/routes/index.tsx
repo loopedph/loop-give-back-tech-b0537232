@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logoMark from "@/assets/looped-logo.png";
+<<<<<<< HEAD
 import productDashboard from "@/assets/product-dashboard.png";
 import productAssets from "@/assets/product-assets.png";
 import productRetire from "@/assets/product-retire.png";
+import advisorChr from "@/assets/advisor-chr.jpg";
+import teamKarl from "@/assets/team-karl.jpg";
+import teamAldrich from "@/assets/team-aldrich.jpg";
+import teamSami from "@/assets/team-sami.jpg";
+import teamTim from "@/assets/team-tim.jpg";
 import { Button } from "@/components/ui/button";
 import { ImpactCalculator } from "@/components/Calculator";
 import {
@@ -12,8 +18,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Check, Layers } from "lucide-react";
 import {
+  Check,
+  Layers,
+=======
+import { Button } from "@/components/ui/button";
+import { ImpactCalculator } from "@/components/Calculator";
+import {
+>>>>>>> parent of 8063780 (Added carousel, packages, metrics)
   Recycle,
   ShieldCheck,
   Cpu,
@@ -30,6 +42,14 @@ import {
   Instagram,
   Facebook,
   Linkedin,
+  Globe2,
+  Wifi,
+  Users,
+  Target,
+  Rocket,
+  Building2,
+  Network,
+  Trash2,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -102,13 +122,21 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <Hero />
+      <Problem />
       <Sustainability />
       <Process />
+<<<<<<< HEAD
       <Product />
       <Packages />
+      <SourcesAndMarket />
+      <Moat />
+=======
+>>>>>>> parent of 8063780 (Added carousel, packages, metrics)
       <Impact />
       <AdvisedBy />
       <Financials />
+      <Roadmap />
+      <Team />
       <ImpactCalculator />
       <Contact />
       <Footer />
@@ -128,11 +156,12 @@ function Nav() {
           <Logo className="h-9 w-9" />
           <span style={{ fontFamily: '"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif', fontWeight: 400 }}>Looped</span>
         </a>
-        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
-          <a href="#process" className="hover:text-foreground transition-colors">Process</a>
+        <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+          <a href="#problem" className="hover:text-foreground transition-colors">Problem</a>
+          <a href="#process" className="hover:text-foreground transition-colors">Solution</a>
+          <a href="#product" className="hover:text-foreground transition-colors">Product</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
-          <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
+          <a href="#team" className="hover:text-foreground transition-colors">Team</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
         <Button asChild size="sm" className="rounded-full">
@@ -160,8 +189,8 @@ function Hero() {
             </span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-            We recover retired IT assets from companies and universities, refurbish them with
-            care, and redistribute them to NGOs and communities who need them most.
+            A B2B2B circular solution recovering retired IT assets from MSMEs and institutions —
+            wiping, refurbishing, and redistributing them to NGOs, LGUs, and communities.
           </p>
           <div className="flex flex-wrap gap-3 pt-2 justify-center">
             <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
@@ -176,9 +205,9 @@ function Hero() {
           <div className="flex items-center gap-8 pt-6 text-sm">
             <Stat value="100%" label="E-waste recovered" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="966 kg" label="CO₂e avoided" />
+            <Stat value="644 kg" label="CO₂e avoided" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="570K L" label="Water saved" />
+            <Stat value="380K L" label="Water saved" />
           </div>
         </div>
       </div>
@@ -198,10 +227,17 @@ function Stat({ value, label }: { value: string; label: string }) {
 function Sustainability() {
   const items = [
     { icon: Recycle, value: "100%", label: "E-waste recovery rate", note: "Nothing we touch goes to landfill." },
+<<<<<<< HEAD
     { icon: Cloud, value: "966 kg", label: "CO₂e emissions avoided", note: "Equivalent to ~3,900 km not driven." },
     { icon: Droplets, value: "570,000 L", label: "Freshwater saved", note: "From avoided new-device manufacturing." },
     { icon: Scale, value: "4.5 g", label: "Neurotoxins kept out of soil", note: "Lead, cadmium, mercury — diverted." },
     { icon: Leaf, value: "6.64 kg", label: "Diverted from landfill", note: "Every gram matters in a linear world." },
+=======
+    { icon: Cloud, value: "644 kg", label: "CO₂e emissions avoided", note: "Equivalent to ~2,600 km not driven." },
+    { icon: Droplets, value: "380,000 L", label: "Freshwater saved", note: "From avoided new-device manufacturing." },
+    { icon: Scale, value: "3 g", label: "Neurotoxins kept out of soil", note: "Lead, cadmium, mercury — diverted." },
+    { icon: Leaf, value: "4.34 kg", label: "Diverted from landfill", note: "Every gram matters in a linear world." },
+>>>>>>> parent of 8063780 (Added carousel, packages, metrics)
     { icon: ShieldCheck, value: "100%", label: "Data destruction success", note: "Zero data leaks. Ever." },
   ];
   return (
@@ -279,6 +315,7 @@ function Process() {
   );
 }
 
+<<<<<<< HEAD
 function Product() {
   const shots = [
     { src: productDashboard, title: "Dashboard", desc: "Your IT portfolio at a glance — value, CO₂e, and salvage in one view." },
@@ -327,23 +364,23 @@ function Product() {
 
 function Packages() {
   const tiers = [
-    { name: "Free", units: "5", highlight: false },
-    { name: "Starter", units: "30", highlight: true },
-    { name: "Growth", units: "100", highlight: false },
-    { name: "Enterprise", units: "Unlimited", highlight: false },
+    { name: "Free", desc: "Pilot the loop with a small fleet — see your assets, value, and impact in one view." },
+    { name: "Starter", desc: "For growing MSMEs ready to formalise IT lifecycle tracking and retirement.", highlight: true },
+    { name: "Growth", desc: "Scale-stage teams managing departmental fleets across multiple locations." },
+    { name: "Enterprise", desc: "Tailored deployments for institutions, schools, and large organisations." },
   ];
-  const perks = ["Free dashboard", "Free retirement*", "Free ESG reports"];
+  const perks = ["Dashboard included", "Retirement included", "ESG reports included"];
   return (
     <section id="packages" className="py-24 md:py-32 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl mb-12 text-center mx-auto">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">How we source</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">Built for every stage</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
             The <span style={{ color: "var(--primary)" }}>ITAM Loop.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Pick the tier that fits your fleet. Every plan includes the dashboard, retirement, and
-            ESG reporting at no cost.
+            From a five-laptop pilot to enterprise-wide rollouts — there's a tier sized to your fleet.
+            Talk to us for the right fit.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -362,11 +399,8 @@ function Packages() {
               <div className="text-xl font-semibold tracking-tight" style={{ color: "var(--primary)" }}>
                 {t.name}
               </div>
-              <div className="mt-4 flex items-baseline gap-1.5">
-                <span className="text-3xl font-semibold tracking-tight">{t.units}</span>
-                <span className="text-sm text-muted-foreground">IT units</span>
-              </div>
-              <ul className="mt-6 space-y-2.5">
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed min-h-[60px]">{t.desc}</p>
+              <ul className="mt-5 space-y-2.5 border-t border-border pt-5">
                 {perks.map((p) => (
                   <li key={p} className="flex items-center gap-2 text-sm">
                     <Check className="h-4 w-4 text-primary shrink-0" />
@@ -377,14 +411,16 @@ function Packages() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground text-center mt-6 italic">
-          *Other costs may be incurred — only the data wipe is free.
+        <p className="text-xs text-muted-foreground text-center mt-6">
+          <a href="#contact" className="underline hover:text-primary transition-colors">Get in touch</a> for tier details.
         </p>
       </div>
     </section>
   );
 }
 
+=======
+>>>>>>> parent of 8063780 (Added carousel, packages, metrics)
 function Impact() {
   return (
     <section id="impact" className="py-24 md:py-32">
@@ -401,7 +437,15 @@ function Impact() {
         <div className="flex items-start gap-4 pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
           <Sparkles className="h-5 w-5 text-primary mt-0.5 shrink-0" />
           <p className="text-sm text-muted-foreground leading-relaxed">
-            <span className="font-medium text-foreground">3 assets sourced · 100% functional.</span> Small numbers,
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <span className="font-medium text-foreground">2 assets sourced · 100% functional.</span> Small numbers,
+=======
+            <span className="font-medium text-foreground">3 assets sourced · 67% functional.</span> Small numbers,
+>>>>>>> parent of 2518252 (Updated refurbishment cycle to 67%)
+=======
+            <span className="font-medium text-foreground">3 assets sourced · 67% functional.</span> Small numbers,
+>>>>>>> parent of 2518252 (Updated refurbishment cycle to 67%)
             big proof: our circular model works at scale-of-one before it scales to thousands.
           </p>
         </div>
@@ -429,63 +473,29 @@ function AdvisedBy() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <div className="relative">
-            <div
-              className="absolute -inset-px rounded-3xl opacity-20 blur-md"
-              style={{ background: "var(--gradient-hero)" }}
-            />
-            <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10 h-full">
-              <div className="flex items-start gap-5">
-                <div
-                  className="hidden sm:inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-primary-foreground"
-                  style={{ background: "var(--gradient-hero)" }}
-                >
-                  <Scale className="h-6 w-6" />
+        <div className="relative max-w-2xl mx-auto">
+          <div
+            className="absolute -inset-px rounded-3xl opacity-20 blur-md"
+            style={{ background: "var(--gradient-hero)" }}
+          />
+          <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <img
+                src={advisorChr}
+                alt="Richard Palpal-Latoc — Chairperson of the Commission on Human Rights"
+                className="h-28 w-28 rounded-2xl object-cover shrink-0 ring-2 ring-primary/20"
+              />
+              <div className="flex-1 space-y-3 text-center sm:text-left">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                  <ShieldCheck className="h-3 w-3" />
+                  Strategic Advisor
                 </div>
-                <div className="flex-1 space-y-3">
-                  <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                    <ShieldCheck className="h-3 w-3" />
-                    Strategic Advisor
+                <div>
+                  <div className="text-xl md:text-2xl font-semibold tracking-tight">
+                    Richard Palpal-latoc
                   </div>
-                  <div>
-                    <div className="text-xl md:text-2xl font-semibold tracking-tight">
-                      The Chairman of the Commission on Human Rights
-                    </div>
-                    <div className="text-sm text-muted-foreground mt-1.5">
-                      Republic of the Philippines
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div
-              className="absolute -inset-px rounded-3xl opacity-20 blur-md"
-              style={{ background: "var(--gradient-hero)" }}
-            />
-            <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10 h-full">
-              <div className="flex items-start gap-5">
-                <div
-                  className="hidden sm:inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-primary-foreground"
-                  style={{ background: "var(--gradient-hero)" }}
-                >
-                  <Sparkles className="h-6 w-6" />
-                </div>
-                <div className="flex-1 space-y-3">
-                  <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                    <ShieldCheck className="h-3 w-3" />
-                    Strategic Advisor
-                  </div>
-                  <div>
-                    <div className="text-xl md:text-2xl font-semibold tracking-tight">
-                      Managing Director of AquaKlima Inc.
-                    </div>
-                    <div className="text-sm text-muted-foreground mt-1.5">
-                      Consultant to ADB and UNDP
-                    </div>
+                  <div className="text-sm text-muted-foreground mt-1.5">
+                    Chairperson, Commission on Human Rights · Republic of the Philippines
                   </div>
                 </div>
               </div>
@@ -535,9 +545,18 @@ function Financials() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-border">
+<<<<<<< HEAD
+          <MiniMetric value="₱13.7K" label="Total equity" />
+          <MiniMetric value="2" label="Assets sourced" />
+          <MiniMetric value="1.0" label="Refurbishment yield" />
+=======
           <MiniMetric value="₱23.7K" label="Total equity" />
           <MiniMetric value="3" label="Assets sourced" />
-          <MiniMetric value="1.0" label="Refurbishment yield" />
+          <MiniMetric value="0.67" label="Refurbishment yield" />
+<<<<<<< HEAD
+>>>>>>> parent of 2518252 (Updated refurbishment cycle to 67%)
+=======
+>>>>>>> parent of 2518252 (Updated refurbishment cycle to 67%)
           <MiniMetric value="0%" label="Lost asset rate" />
         </div>
       </div>
@@ -624,5 +643,258 @@ function Footer() {
         <div>© {new Date().getFullYear()} Looped ITAD PH. All rights reserved.</div>
       </div>
     </footer>
+  );
+}
+
+function Problem() {
+  const stats = [
+    {
+      icon: Trash2,
+      value: "4 out of 5",
+      label: "of e-waste ends up in landfills",
+      tag: "Environment",
+    },
+    {
+      icon: Wifi,
+      value: "1 out of 2",
+      label: "Filipinos have no home internet access",
+      tag: "Digital literacy",
+    },
+    {
+      icon: Users,
+      value: "31M+",
+      label: "children and women exposed to hazardous e-waste effects",
+      tag: "Human rights",
+    },
+  ];
+  return (
+    <section id="problem" className="py-24 md:py-32 bg-secondary/40">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl mb-14">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">The problem</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+            Three crises,{" "}
+            <span style={{ color: "var(--primary)" }}>one broken loop.</span>
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            E-waste, the digital divide, and human-rights harm are usually treated as separate
+            problems. They share the same root cause — and the same circular fix.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-5">
+          {stats.map((s) => (
+            <div key={s.tag} className="rounded-2xl border border-border bg-card p-7">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+                <s.icon className="h-5 w-5" />
+              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">{s.tag}</div>
+              <div className="text-3xl font-semibold tracking-tight mt-2">{s.value}</div>
+              <div className="text-sm text-muted-foreground mt-2 leading-relaxed">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SourcesAndMarket() {
+  return (
+    <section id="sources" className="py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl mb-14">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">B2B2B model</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+            From the businesses that have it{" "}
+            <span style={{ color: "var(--primary)" }}>to the communities that need it.</span>
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5">
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+              <Building2 className="h-5 w-5" />
+            </div>
+            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Our sources</div>
+            <h3 className="text-2xl font-semibold tracking-tight mt-2">MSMEs, institutions & organisations</h3>
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+              We onboard the businesses sitting on retired laptops and PCs — giving them an IT
+              asset management platform that makes responsible retirement the obvious choice.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+              <HeartHandshake className="h-5 w-5" />
+            </div>
+            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Our market</div>
+            <h3 className="text-2xl font-semibold tracking-tight mt-2">NGOs, LGUs & communities</h3>
+            <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+              Refurbished units are routed to non-profits, local governments, charities, and
+              community partners — closing the loop with measurable social impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Moat() {
+  const moats = [
+    { icon: ShieldCheck, title: "Validated by institutional leaders", desc: "Credibility earned where it matters most — at the top of Philippine governance." },
+    { icon: Network, title: "Access to local & international NGOs", desc: "A distribution network most ITAD competitors can't replicate." },
+    { icon: Cpu, title: "Technocratic team", desc: "Operators who can build, not just pitch — engineering, accounting, analytics under one roof." },
+    { icon: Globe2, title: "International team", desc: "Talent split across the Philippines and the UAE for round-the-clock execution." },
+  ];
+  return (
+    <section id="moat" className="py-24 md:py-32 bg-secondary/40">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl mb-14">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">Our moat</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+            Why Looped is hard to{" "}
+            <span style={{ color: "var(--primary)" }}>copy.</span>
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            Competitors split the market between circular-economy plays and pure ITAD. We combine
+            both — anchored in sustainability and institutional trust.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-5">
+          {moats.map((m) => (
+            <div key={m.title} className="rounded-2xl border border-border bg-card p-7">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+                <m.icon className="h-5 w-5" />
+              </div>
+              <h3 className="text-lg font-semibold">{m.title}</h3>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{m.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Roadmap() {
+  const phases = [
+    {
+      icon: Rocket,
+      time: "3 months",
+      goals: ["10 MSME partnerships", "10 partnership sales"],
+    },
+    {
+      icon: Target,
+      time: "7 months",
+      goals: ["25 MSME partnerships", "25 partnership sales", "AI integration in ITAM"],
+    },
+    {
+      icon: Globe2,
+      time: "1 year",
+      goals: ["50 MSME partnerships", "50 partnership sales", "First international partnership"],
+    },
+  ];
+  return (
+    <section id="roadmap" className="py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl mb-14">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">Where we're headed</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+            Be the leading partner for{" "}
+            <span style={{ color: "var(--primary)" }}>circular economy in PH.</span>
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            Our near-term goal: lock in 25 partnerships by year-end through warm institutional
+            networks, cold outreach, and NGO referrals.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-5">
+          {phases.map((p, i) => (
+            <div key={p.time} className="relative rounded-2xl border border-border bg-card p-7">
+              <div className="absolute top-5 right-5 text-xs font-mono text-muted-foreground">
+                0{i + 1}
+              </div>
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary mb-5">
+                <p.icon className="h-5 w-5" />
+              </div>
+              <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">Milestone</div>
+              <div className="text-2xl font-semibold tracking-tight mt-1.5">{p.time}</div>
+              <ul className="mt-4 space-y-2">
+                {p.goals.map((g) => (
+                  <li key={g} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                    <span>{g}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Team() {
+  const people = [
+    {
+      img: teamKarl,
+      name: "Karl Miguel Palpal-latoc",
+      role: "Founder · Head of Strategies",
+      school: "San Beda University · Management Accounting",
+      country: "Philippines",
+    },
+    {
+      img: teamAldrich,
+      name: "Aldrich Dave Sampang",
+      role: "Co-founder · Head of Marketing",
+      school: "University of Wollongong in Dubai · Business Analytics",
+      country: "United Arab Emirates",
+    },
+    {
+      img: teamSami,
+      name: "Sami Tarabichi",
+      role: "Co-founder · Head of Business Analytics",
+      school: "University of Wollongong in Dubai · Business Analytics",
+      country: "United Arab Emirates",
+    },
+    {
+      img: teamTim,
+      name: "Timothy Kyle Valle",
+      role: "Co-founder · Head of Technology",
+      school: "University of Wollongong in Dubai · Computer Science",
+      country: "United Arab Emirates",
+    },
+  ];
+  return (
+    <section id="team" className="py-24 md:py-32 bg-secondary/40">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="max-w-2xl mb-14">
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">The team</p>
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
+            Operators across{" "}
+            <span style={{ color: "var(--primary)" }}>two continents.</span>
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            Strategy, marketing, analytics, sustainability, and engineering — built by people who
+            ship, not just pitch.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {people.map((p) => (
+            <div key={p.name} className="rounded-2xl border border-border bg-card p-6 text-center">
+              <img
+                src={p.img}
+                alt={p.name}
+                className="h-24 w-24 mx-auto rounded-full object-cover ring-2 ring-primary/20"
+              />
+              <div className="mt-5 text-base font-semibold tracking-tight">{p.name}</div>
+              <div className="text-xs text-primary font-medium mt-1">{p.role}</div>
+              <div className="text-xs text-muted-foreground mt-3 leading-relaxed">{p.school}</div>
+              <div className="text-xs text-muted-foreground mt-1 italic">{p.country}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
