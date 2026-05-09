@@ -137,9 +137,6 @@ function Nav() {
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" variant="outline" className="rounded-full hidden sm:inline-flex">
-            <a href="#packages">ITAM Loop</a>
-          </Button>
           <Button asChild size="sm" className="rounded-full">
             <a href="#contact">Partner with us</a>
           </Button>
