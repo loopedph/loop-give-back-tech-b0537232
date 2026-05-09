@@ -414,8 +414,7 @@ function Impact() {
           non-profits go without. Looped bridges that gap, turning corporate IT turnover into
           community access.
         </p>
-        <div className="flex items-start gap-4 pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
-          <Sparkles className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+        <div className="pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
           <p className="text-sm text-muted-foreground leading-relaxed">
             <span className="font-medium text-foreground">3 assets sourced · 100% functional.</span> Small numbers,
             big proof: our circular model works at scale-of-one before it scales to thousands.
