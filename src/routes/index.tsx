@@ -156,7 +156,6 @@ function Hero() {
       <div className="mx-auto max-w-4xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
         <div className="space-y-7 flex flex-col items-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground">
-            <Leaf className="h-3.5 w-3.5 text-primary" />
             Circular IT • Pre-seed • Philippines
           </span>
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
@@ -172,7 +171,7 @@ function Hero() {
           <div className="flex flex-wrap gap-3 pt-2 justify-center">
             <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
               <a href="#contact">
-                Donate your IT assets <ArrowRight className="ml-1 h-4 w-4" />
+                Retire now <ArrowRight className="ml-1 h-4 w-4" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
