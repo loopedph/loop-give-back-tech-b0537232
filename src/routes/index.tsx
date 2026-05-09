@@ -131,13 +131,19 @@ function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
           <a href="#process" className="hover:text-foreground transition-colors">Process</a>
+          <a href="#packages" className="hover:text-foreground transition-colors">ITAM Loop</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
           <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
-        <Button asChild size="sm" className="rounded-full">
-          <a href="#contact">Partner with us</a>
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button asChild size="sm" variant="outline" className="rounded-full hidden sm:inline-flex">
+            <a href="#packages">ITAM Loop</a>
+          </Button>
+          <Button asChild size="sm" className="rounded-full">
+            <a href="#contact">Partner with us</a>
+          </Button>
+        </div>
       </div>
     </header>
   );
@@ -150,7 +156,6 @@ function Hero() {
       <div className="mx-auto max-w-4xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
         <div className="space-y-7 flex flex-col items-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground">
-            <Leaf className="h-3.5 w-3.5 text-primary" />
             Circular IT • Pre-seed • Philippines
           </span>
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
@@ -166,7 +171,7 @@ function Hero() {
           <div className="flex flex-wrap gap-3 pt-2 justify-center">
             <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
               <a href="#contact">
-                Donate your IT assets <ArrowRight className="ml-1 h-4 w-4" />
+                Retire now <ArrowRight className="ml-1 h-4 w-4" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
@@ -305,11 +310,18 @@ function Product() {
           <CarouselContent className="-ml-4">
             {shots.map((s) => (
               <CarouselItem key={s.title} className="pl-4 md:basis-4/5 lg:basis-3/4">
-                <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-[var(--shadow-soft)]">
-                  <img src={s.src} alt={s.title} className="w-full h-auto block" loading="lazy" />
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{s.desc}</p>
+                <div className="relative">
+                  <div
+                    aria-hidden
+                    className="absolute -inset-6 -z-10 rounded-[2rem] opacity-40 blur-2xl"
+                    style={{ background: "var(--gradient-hero)" }}
+                  />
+                  <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-[var(--shadow-soft)]">
+                    <img src={s.src} alt={s.title} className="w-full h-auto block" loading="lazy" />
+                    <div className="p-6">
+                      <h3 className="text-lg font-semibold">{s.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{s.desc}</p>
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
@@ -350,15 +362,8 @@ function Packages() {
           {tiers.map((t) => (
             <div
               key={t.name}
-              className={`relative rounded-2xl border bg-card p-7 transition-[var(--transition-smooth)] hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] ${
-                t.highlight ? "border-primary" : "border-border"
-              }`}
+              className="relative rounded-2xl border border-border bg-card p-7 transition-[var(--transition-smooth)] hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
             >
-              {t.highlight && (
-                <div className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-0.5 text-xs font-medium text-primary-foreground">
-                  Most popular
-                </div>
-              )}
               <div className="text-xl font-semibold tracking-tight" style={{ color: "var(--primary)" }}>
                 {t.name}
               </div>
@@ -377,9 +382,20 @@ function Packages() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground text-center mt-6 italic">
-          *Other costs may be incurred — only the data wipe is free.
-        </p>
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
+            <a
+              href="https://forms.zohopublic.com/loopedloop1/form/LoopedITAMwaitlist/formperma/b47vRB4CrS-K4qJq8fpkZ4Z2fRZFq6M7pVFWiA-g8lU"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join the waitlist <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+          </Button>
+          <p className="text-xs text-muted-foreground text-center italic">
+            *Other costs may be incurred — only the data wipe is free.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -398,8 +414,7 @@ function Impact() {
           non-profits go without. Looped bridges that gap, turning corporate IT turnover into
           community access.
         </p>
-        <div className="flex items-start gap-4 pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
-          <Sparkles className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+        <div className="pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
           <p className="text-sm text-muted-foreground leading-relaxed">
             <span className="font-medium text-foreground">3 assets sourced · 100% functional.</span> Small numbers,
             big proof: our circular model works at scale-of-one before it scales to thousands.
