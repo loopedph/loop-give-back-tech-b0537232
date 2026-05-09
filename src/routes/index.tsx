@@ -131,15 +131,12 @@ function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
           <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-          <a href="#packages" className="hover:text-foreground transition-colors">ITAM Loop</a>
+          <a href="#packages" className="hover:text-foreground transition-colors">Solution</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
           <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" variant="outline" className="rounded-full hidden sm:inline-flex">
-            <a href="#packages">ITAM Loop</a>
-          </Button>
           <Button asChild size="sm" className="rounded-full">
             <a href="#contact">Partner with us</a>
           </Button>
@@ -311,11 +308,6 @@ function Product() {
             {shots.map((s) => (
               <CarouselItem key={s.title} className="pl-4 md:basis-4/5 lg:basis-3/4">
                 <div className="relative">
-                  <div
-                    aria-hidden
-                    className="absolute -inset-6 -z-10 rounded-[2rem] opacity-40 blur-2xl"
-                    style={{ background: "var(--gradient-hero)" }}
-                  />
                   <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-[var(--shadow-soft)]">
                     <img src={s.src} alt={s.title} className="w-full h-auto block" loading="lazy" />
                     <div className="p-6">
@@ -351,7 +343,7 @@ function Packages() {
         <div className="max-w-2xl mb-12 text-center mx-auto">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">How we source</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
-            The <span style={{ color: "var(--primary)" }}>ITAM Loop.</span>
+            Track your <span style={{ color: "var(--primary)" }}>tech.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
             Pick the tier that fits your fleet. Every plan includes the dashboard, retirement, and
@@ -416,7 +408,7 @@ function Impact() {
         </p>
         <div className="pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            <span className="font-medium text-foreground">3 assets sourced · 100% functional.</span> Small numbers,
+            <span className="font-medium" style={{ color: "var(--primary)" }}>3 assets sourced · 100% functional.</span> Small numbers,
             big proof: our circular model works at scale-of-one before it scales to thousands.
           </p>
         </div>
@@ -431,8 +423,8 @@ function AdvisedBy() {
       <div className="absolute inset-0 -z-10 opacity-[0.05]" style={{ background: "var(--gradient-hero)" }} />
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4 inline-flex items-center gap-2">
-            <Sparkles className="h-4 w-4" /> Advised by
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-4">
+            Advised by
           </p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] max-w-3xl mx-auto">
             Guided by leaders in{" "}
