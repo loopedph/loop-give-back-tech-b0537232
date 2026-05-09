@@ -437,12 +437,6 @@ function AdvisedBy() {
             />
             <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10 h-full">
               <div className="flex items-start gap-5">
-                <div
-                  className="hidden sm:inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-primary-foreground"
-                  style={{ background: "var(--gradient-hero)" }}
-                >
-                  <Scale className="h-6 w-6" />
-                </div>
                 <div className="flex-1 space-y-3">
                   <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                     <ShieldCheck className="h-3 w-3" />
@@ -468,12 +462,6 @@ function AdvisedBy() {
             />
             <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10 h-full">
               <div className="flex items-start gap-5">
-                <div
-                  className="hidden sm:inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-primary-foreground"
-                  style={{ background: "var(--gradient-hero)" }}
-                >
-                  <Sparkles className="h-6 w-6" />
-                </div>
                 <div className="flex-1 space-y-3">
                   <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                     <ShieldCheck className="h-3 w-3" />
