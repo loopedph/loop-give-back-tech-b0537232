@@ -131,13 +131,19 @@ function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
           <a href="#process" className="hover:text-foreground transition-colors">Process</a>
+          <a href="#packages" className="hover:text-foreground transition-colors">ITAM Loop</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
           <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
-        <Button asChild size="sm" className="rounded-full">
-          <a href="#contact">Partner with us</a>
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button asChild size="sm" variant="outline" className="rounded-full hidden sm:inline-flex">
+            <a href="#packages">ITAM Loop</a>
+          </Button>
+          <Button asChild size="sm" className="rounded-full">
+            <a href="#contact">Partner with us</a>
+          </Button>
+        </div>
       </div>
     </header>
   );
