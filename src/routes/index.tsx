@@ -131,7 +131,7 @@ function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
           <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-          <a href="#packages" className="hover:text-foreground transition-colors">ITAM Loop</a>
+          <a href="#packages" className="hover:text-foreground transition-colors">Solution</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
           <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
