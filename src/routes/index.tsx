@@ -180,7 +180,7 @@ function Hero() {
             <div className="h-8 w-px bg-border" />
             <Stat value="8,700 kg" label="CO₂e avoided" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="7.M L" label="Water saved" />
+            <Stat value="7.05M L" label="Water saved" />
           </div>
         </div>
       </div>
