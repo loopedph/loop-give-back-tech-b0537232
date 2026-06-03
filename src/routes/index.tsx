@@ -408,7 +408,7 @@ function Impact() {
         </p>
         <div className="pt-2 rounded-2xl border border-border bg-card p-5 text-left max-w-xl mx-auto">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            <span className="font-medium" style={{ color: "var(--primary)" }}>3 assets sourced · 100% functional.</span> Small numbers,
+            <span className="font-medium" style={{ color: "var(--primary)" }}>25 assets sourced · 100% functional.</span> Small numbers,
             big proof: our circular model works at scale-of-one before it scales to thousands.
           </p>
         </div>
