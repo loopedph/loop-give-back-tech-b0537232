@@ -178,9 +178,9 @@ function Hero() {
           <div className="flex items-center gap-8 pt-6 text-sm">
             <Stat value="100%" label="E-waste recovered" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="9,016 kg" label="CO₂e avoided" />
+            <Stat value="8,700 kg" label="CO₂e avoided" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="5.32M L" label="Water saved" />
+            <Stat value="7.M L" label="Water saved" />
           </div>
         </div>
       </div>
@@ -200,10 +200,10 @@ function Stat({ value, label }: { value: string; label: string }) {
 function Sustainability() {
   const items = [
     { icon: Recycle, value: "100%", label: "E-waste recovery rate", note: "Nothing we touch goes to landfill." },
-    { icon: Cloud, value: "9,016 kg", label: "CO₂e emissions avoided", note: "Equivalent to ~3,900 km not driven." },
-    { icon: Droplets, value: "5,320,000 L", label: "Freshwater saved", note: "From avoided new-device manufacturing." },
-    { icon: Scale, value: "42 g", label: "Neurotoxins kept out of soil", note: "Lead, cadmium, mercury — diverted." },
-    { icon: Leaf, value: "78.44 kg", label: "Diverted from landfill", note: "Every gram matters in a linear world." },
+    { icon: Cloud, value: "8,700 kg", label: "CO₂e emissions avoided", note: "Equivalent to ~3,900 km not driven." },
+    { icon: Droplets, value: "7,050,000 L", label: "Freshwater saved", note: "From avoided new-device manufacturing." },
+    { icon: Scale, value: "26,500 kg", label: "Raw materials kept out of soil", note: "Lead, cadmium, mercury — diverted." },
+    { icon: Leaf, value: "92.50 kg", label: "Diverted from landfill", note: "Every gram matters in a linear world." },
     { icon: ShieldCheck, value: "100%", label: "Data destruction success", note: "Zero data leaks. Ever." },
   ];
   return (
