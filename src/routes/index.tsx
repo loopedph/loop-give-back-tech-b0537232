@@ -494,7 +494,7 @@ function AdvisedBy() {
 
 function Financials() {
   const headline = [
-    { icon: TrendingUp, value: "88%", label: "Gross margin", note: "₱2,500 sales · ₱250 COGS" },
+    { icon: TrendingUp, value: "88%", label: "Gross margin", note: "From retired to functional IT" },
     { icon: Wallet, value: "73%", label: "Net income margin", note: "Lean opex, no waste" },
     { icon: ShieldCheck, value: "₱0", label: "Total liabilities", note: "Fully equity-funded" },
   ];
