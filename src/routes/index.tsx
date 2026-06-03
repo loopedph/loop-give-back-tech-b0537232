@@ -178,9 +178,9 @@ function Hero() {
           <div className="flex items-center gap-8 pt-6 text-sm">
             <Stat value="100%" label="E-waste recovered" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="966 kg" label="CO₂e avoided" />
+            <Stat value="9,016 kg" label="CO₂e avoided" />
             <div className="h-8 w-px bg-border" />
-            <Stat value="570K L" label="Water saved" />
+            <Stat value="5.32M L" label="Water saved" />
           </div>
         </div>
       </div>
