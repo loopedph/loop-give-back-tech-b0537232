@@ -494,8 +494,8 @@ function AdvisedBy() {
 
 function Financials() {
   const headline = [
-    { icon: TrendingUp, value: "90%", label: "Gross margin", note: "₱2,500 sales · ₱250 COGS" },
-    { icon: Wallet, value: "79%", label: "Net income margin", note: "Lean opex, no waste" },
+    { icon: TrendingUp, value: "88%", label: "Gross margin", note: "₱2,500 sales · ₱250 COGS" },
+    { icon: Wallet, value: "73%", label: "Net income margin", note: "Lean opex, no waste" },
     { icon: ShieldCheck, value: "₱0", label: "Total liabilities", note: "Fully equity-funded" },
   ];
   return (
@@ -530,9 +530,9 @@ function Financials() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-border">
-          <MiniMetric value="₱23.7K" label="Total equity" />
-          <MiniMetric value="3" label="Assets sourced" />
-          <MiniMetric value="1.0" label="Refurbishment yield" />
+          <MiniMetric value="₱56.18K" label="Total equity" />
+          <MiniMetric value="25" label="Assets sourced" />
+          <MiniMetric value="25.0" label="Refurbishment yield" />
           <MiniMetric value="0%" label="Lost asset rate" />
         </div>
       </div>
