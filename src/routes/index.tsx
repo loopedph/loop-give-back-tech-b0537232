@@ -200,10 +200,10 @@ function Stat({ value, label }: { value: string; label: string }) {
 function Sustainability() {
   const items = [
     { icon: Recycle, value: "100%", label: "E-waste recovery rate", note: "Nothing we touch goes to landfill." },
-    { icon: Cloud, value: "966 kg", label: "CO₂e emissions avoided", note: "Equivalent to ~3,900 km not driven." },
-    { icon: Droplets, value: "570,000 L", label: "Freshwater saved", note: "From avoided new-device manufacturing." },
-    { icon: Scale, value: "4.5 g", label: "Neurotoxins kept out of soil", note: "Lead, cadmium, mercury — diverted." },
-    { icon: Leaf, value: "6.64 kg", label: "Diverted from landfill", note: "Every gram matters in a linear world." },
+    { icon: Cloud, value: "9,016 kg", label: "CO₂e emissions avoided", note: "Equivalent to ~3,900 km not driven." },
+    { icon: Droplets, value: "5,320,000 L", label: "Freshwater saved", note: "From avoided new-device manufacturing." },
+    { icon: Scale, value: "42 g", label: "Neurotoxins kept out of soil", note: "Lead, cadmium, mercury — diverted." },
+    { icon: Leaf, value: "78.44 kg", label: "Diverted from landfill", note: "Every gram matters in a linear world." },
     { icon: ShieldCheck, value: "100%", label: "Data destruction success", note: "Zero data leaks. Ever." },
   ];
   return (
