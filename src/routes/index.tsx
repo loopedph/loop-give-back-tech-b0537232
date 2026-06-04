@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Looped ITAD PH — Circular IT Asset Disposition Philippines" },
+      { title: "Looped | ITAD PH — Circular IT Asset Disposition Philippines" },
       {
         name: "description",
         content:
@@ -51,8 +51,8 @@ export const Route = createFileRoute("/")({
       },
       { name: "robots", content: "index, follow" },
       { name: "author", content: "Looped ITAD PH" },
-      { property: "og:site_name", content: "Looped ITAD PH" },
-      { property: "og:title", content: "Looped ITAD PH — Circular IT Asset Disposition Philippines" },
+      { property: "og:site_name", content: "Looped | ITAD PH" },
+      { property: "og:title", content: "Looped | ITAD PH — Circular IT Asset Disposition Philippines" },
       {
         property: "og:description",
         content:
