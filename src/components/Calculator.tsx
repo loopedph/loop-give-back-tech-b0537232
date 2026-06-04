@@ -46,20 +46,20 @@ const CONDITION_LABEL: Record<Condition, string> = {
 const PER_UNIT: Record<DeviceType, {
   waterL: number;
   co2Kg: number;
-  neurotoxinsKg: number; // stored in kg for consistent display
+  rawmaterials: number; // stored in kg for consistent display
   landfillKg: number;
 }> = {
   laptop: {
     waterL: 190000,
-    co2Kg: 322,
-    neurotoxinsKg: 0.0015, // 1.5 g
-    landfillKg: 2.04,
+    co2Kg: 215,
+    rawmaterials: 1.2, // 1200 kg
+    landfillKg: 2,
   },
   desktop: {
-    waterL: (285000 + 700000) / 2, // 492,500 L
-    co2Kg: 680,
-    neurotoxinsKg: ((7.9 + 9) / 2) / 1000, // ~0.00845 kg (8.45 g)
-    landfillKg: (7 + 16) / 2, // 11.5 kg
+    waterL: 650000, 
+    co2Kg: 635,
+    rawmaterials: 1.4, // 1,400 kg
+    landfillKg: 8.5, // 11.5 kg
   },
 };
 
@@ -128,7 +128,7 @@ export function ImpactCalculator() {
       totalBenefit,
       water: rows.reduce((s, r) => s + PER_UNIT[r.type].waterL, 0),
       co2: rows.reduce((s, r) => s + PER_UNIT[r.type].co2Kg, 0),
-      neurotoxins: rows.reduce((s, r) => s + PER_UNIT[r.type].neurotoxinsKg, 0),
+      rawmaterials: rows.reduce((s, r) => s + PER_UNIT[r.type].rawmaterials, 0),
       landfill: rows.reduce((s, r) => s + PER_UNIT[r.type].landfillKg, 0),
     };
   }, [rows]);
@@ -346,8 +346,8 @@ export function ImpactCalculator() {
                 />
                 <ImpactStat
                   Icon={Scale}
-                  value={`${num(totals.neurotoxins * 1000, 2)} g`}
-                  label="Neurotoxins diverted"
+                  value={`${num(totals.rawmaterials * 1000, 2)} kg`}
+                  label="Raw materials avoided"
                 />
                 <ImpactStat
                   Icon={Trash}

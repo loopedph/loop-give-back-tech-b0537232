@@ -3,6 +3,7 @@ import logoMark from "@/assets/looped-logo.png";
 import productDashboard from "@/assets/product-dashboard.png";
 import productAssets from "@/assets/product-assets.png";
 import productRetire from "@/assets/product-retire.png";
+import productLaptop from "@/assets/product-laptops.png"
 import { Button } from "@/components/ui/button";
 import { ImpactCalculator } from "@/components/Calculator";
 import {
@@ -31,6 +32,7 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
+import { labelGrid } from "react-day-picker";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -131,7 +133,7 @@ function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
           <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-          <a href="#packages" className="hover:text-foreground transition-colors">Solution</a>
+          <a href="#product" className="hover:text-foreground transition-colors">Solution</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
           <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
           <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
@@ -151,10 +153,7 @@ function Hero() {
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-soft)" }} />
       <div className="mx-auto max-w-4xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-        <div className="space-y-7 flex flex-col items-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground">
-            Circular IT • Pre-seed • Philippines
-          </span>
+        <div className="space-y-10 flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
             Closing the loop on{" "}
             <span className="italic" style={{ color: "var(--primary)" }}>
@@ -187,6 +186,12 @@ function Hero() {
     </section>
   );
 }
+
+/*
+<span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+            Circular IT • Pre-seed • Philippines
+          </span>
+*/
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
@@ -245,10 +250,10 @@ function Sustainability() {
 
 function Process() {
   const steps = [
-    { icon: Recycle, title: "Sourcing", desc: "We partner with universities and corporations to recover retired IT assets at end-of-life." },
-    { icon: ShieldCheck, title: "Data Sanitization", desc: "Every unit undergoes certified data destruction to guarantee institutional security." },
-    { icon: Cpu, title: "Hardware Upgrade", desc: "We install new SSDs and RAM upgrades so devices meet modern performance standards." },
-    { icon: HeartHandshake, title: "Redistribution", desc: "Refurbished units are earmarked for NGOs, schools, and community partners." },
+    { icon: Recycle, title: "Sourcing", desc: "We partner with businesses to recover retired IT assets at end-of-life." },
+    { icon: ShieldCheck, title: "Data Sanitization", desc: "Every unit undergoes NIST 800-88 compliant data destruction to guarantee institutional security." },
+    { icon: Cpu, title: "Hardware Upgrade", desc: "We install new SSDs and RAM upgrades as needed so devices meet modern performance standards." },
+    { icon: HeartHandshake, title: "Redistribution", desc: "Refurbished units are earmarked for NGOs, businesses, and community partners." },
   ];
   return (
     <section id="process" className="py-24 md:py-32 bg-secondary/40">
@@ -285,7 +290,7 @@ function Product() {
   const shots = [
     { src: productDashboard, title: "Dashboard", desc: "Your IT portfolio at a glance — value, CO₂e, and salvage in one view." },
     { src: productAssets, title: "Asset Inventory", desc: "Track every device's age, useful life, and salvage value in real time." },
-    { src: productRetire, title: "One-click Retirement", desc: "Certified data destruction, refurbishment, and NGO redistribution — all logged." },
+    { src: productRetire, title: "One-click Retirement", desc: "NIST 800-88 compliant data destruction, refurbishment, and NGO redistribution — all logged." },
   ];
   return (
     <section id="product" className="py-24 md:py-32">
@@ -345,26 +350,50 @@ function Product() {
 
 function Packages() {
   const tiers = [
-    { name: "Free", units: "5", highlight: false },
-    { name: "Starter", units: "30", highlight: true },
-    { name: "Growth", units: "100", highlight: false },
-    { name: "Enterprise", units: "Unlimited", highlight: false },
+    { name: "Laptops", units: "15", highlight: false },
+    { name: "Desktops", units: "5", highlight: true },
+    { name: "Monitors", units: "5", highlight: false },
+    { name: "Peripherals", units: "3", highlight: false },
   ];
   const perks = ["Free dashboard", "Free retirement*", "Free ESG reports"];
   return (
     <section id="packages" className="py-24 md:py-32 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-6">
+        
         <div className="max-w-2xl mb-12 text-center mx-auto">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">How we source</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3">Our way of giving back</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1]">
-            Track your <span style={{ color: "var(--primary)" }}>tech.</span>
+            Explore sustainable <span style={{ color: "var(--primary)" }}>tech.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Pick the tier that fits your fleet. Every plan includes the dashboard, retirement, and
-            ESG reporting at no cost.
+            We offer fully sanitized and refurbished laptops, desktops, monitors. Every unit is a win for the planet and a tool for someone in need.
           </p>
+          <div>
+            <img className="mt-5 text-lg text-muted-foreground leading-relaxed" src={productLaptop} alt="Refurbished laptops ready for redistribution"/>
+          </div>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+       <div className="mt-10 flex flex-col items-center gap-3">
+          <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
+            <a
+              href="https://sheet.zoho.com/sheet/open/kgeus362de41a9c604cb2907eecf213594f56"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy from Looped
+            </a>
+          </Button>
+          <p className="text-xs text-muted-foreground text-center italic">
+            Every device is sold 40% cheaper than open market price
+          </p>
+        </div>    
+      </div>
+      
+    </section>
+  );
+}
+
+/*
+<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {tiers.map((t) => (
             <div
               key={t.name}
@@ -388,11 +417,7 @@ function Packages() {
             </div>
           ))}
         </div>
-        
-      </div>
-    </section>
-  );
-}
+*/
 
 function Impact() {
   return (
@@ -440,19 +465,18 @@ function AdvisedBy() {
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <div className="relative">
             <div
-              className="absolute -inset-px rounded-3xl opacity-20 blur-md"
+              className="absolute -inset-px rounded-3xl opacity-15 blur-md"
               style={{ background: "var(--gradient-hero)" }}
             />
             <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10 h-full">
               <div className="flex items-start gap-5">
                 <div className="flex-1 space-y-3">
                   <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                    <ShieldCheck className="h-3 w-3" />
                     Strategic Advisor
                   </div>
                   <div>
                     <div className="text-xl md:text-2xl font-semibold tracking-tight">
-                      The Chairman of the Commission on Human Rights
+                      The <span style={{ color: "var(--primary)" }}>Chairperson</span> of the Commission on Human Rights
                     </div>
                     <div className="text-sm text-muted-foreground mt-1.5">
                       Republic of the Philippines
@@ -465,19 +489,19 @@ function AdvisedBy() {
 
           <div className="relative">
             <div
-              className="absolute -inset-px rounded-3xl opacity-20 blur-md"
+              className="absolute -inset-px rounded-3xl opacity-15 blur-md"
               style={{ background: "var(--gradient-hero)" }}
             />
             <div className="relative rounded-3xl border border-border bg-card p-8 md:p-10 h-full">
               <div className="flex items-start gap-5">
                 <div className="flex-1 space-y-3">
                   <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-                    <ShieldCheck className="h-3 w-3" />
+                  
                     Strategic Advisor
                   </div>
                   <div>
                     <div className="text-xl md:text-2xl font-semibold tracking-tight">
-                      Managing Director of AquaKlima Inc.
+                      The <span style={{ color: "var(--primary)" }}>Managing Director</span> of AquaKlima Inc.
                     </div>
                     <div className="text-sm text-muted-foreground mt-1.5">
                       Consultant to ADB and UNDP
@@ -497,7 +521,7 @@ function Financials() {
   const headline = [
     { icon: TrendingUp, value: "88%", label: "Gross margin", note: "From retired to functional" },
     { icon: Wallet, value: "73%", label: "Net income margin", note: "Lean opex, no waste" },
-    { icon: ShieldCheck, value: "₱0", label: "Total liabilities", note: "Fully equity-funded" },
+    { icon: ShieldCheck, value: "₱0", label: "Total liabilities", note: "Bootstrapped and equity-funded" },
   ];
   return (
     <section id="financials" className="py-24 md:py-32 bg-secondary/40">
