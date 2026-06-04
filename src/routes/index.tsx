@@ -324,6 +324,20 @@ function Product() {
             <CarouselNext className="static translate-y-0" />
           </div>
         </Carousel>
+        <div className="mt-10 flex flex-col items-center gap-3">
+          <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
+            <a
+              href="https://forms.zohopublic.com/loopedloop1/form/LoopedITAMwaitlist/formperma/b47vRB4CrS-K4qJq8fpkZ4Z2fRZFq6M7pVFWiA-g8lU"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join the waitlist <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+          </Button>
+          <p className="text-xs text-muted-foreground text-center italic">
+            *Other costs may be incurred — only the data wipe is free.
+          </p>
+        </div>
       </div>
     </section>
   );
@@ -374,20 +388,7 @@ function Packages() {
             </div>
           ))}
         </div>
-        <div className="mt-10 flex flex-col items-center gap-3">
-          <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
-            <a
-              href="https://forms.zohopublic.com/loopedloop1/form/LoopedITAMwaitlist/formperma/b47vRB4CrS-K4qJq8fpkZ4Z2fRZFq6M7pVFWiA-g8lU"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join the waitlist <ArrowRight className="ml-1 h-4 w-4" />
-            </a>
-          </Button>
-          <p className="text-xs text-muted-foreground text-center italic">
-            *Other costs may be incurred — only the data wipe is free.
-          </p>
-        </div>
+        
       </div>
     </section>
   );
