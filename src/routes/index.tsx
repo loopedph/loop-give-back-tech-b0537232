@@ -335,7 +335,7 @@ function Product() {
             </a>
           </Button>
           <p className="text-xs text-muted-foreground text-center italic">
-            *Other costs may be incurred — only the data wipe is free.
+            *Every plan includes the dashboard, retirement, and ESG reporting at no cost.
           </p>
         </div>
       </div>
