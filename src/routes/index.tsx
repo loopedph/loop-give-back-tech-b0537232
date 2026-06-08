@@ -3,7 +3,14 @@ import logoMark from "@/assets/looped-logo.png";
 import productDashboard from "@/assets/product-dashboard.png";
 import productAssets from "@/assets/product-assets.png";
 import productRetire from "@/assets/product-retire.png";
-import productLaptop from "@/assets/product-laptops.png"
+import productLaptop from "@/assets/product-laptops.png";
+import productX556U from "@/assets/AX556U1.jpg";
+import productA1374 from "@/assets/MA13741.jpeg";
+import productA14662 from "@/assets/MA14662.jpeg";
+import productA14663 from "@/assets/MA14663.jpeg";
+import productA1278 from "@/assets/MA12781.jpeg";
+import productA1502 from "@/assets/MA15021.jpeg";
+import productA1465 from "@/assets/MA14651.jpeg";
 import { Button } from "@/components/ui/button";
 import { ImpactCalculator } from "@/components/Calculator";
 import {
@@ -38,7 +45,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Looped | ITAD PH — Circular IT Asset Disposition Philippines" },
+      { title: "Looped ITAD PH — Circular IT Asset Disposition Philippines" },
       {
         name: "description",
         content:
@@ -51,8 +58,8 @@ export const Route = createFileRoute("/")({
       },
       { name: "robots", content: "index, follow" },
       { name: "author", content: "Looped ITAD PH" },
-      { property: "og:site_name", content: "Looped | ITAD PH" },
-      { property: "og:title", content: "Looped | ITAD PH — Circular IT Asset Disposition Philippines" },
+      { property: "og:site_name", content: "Looped ITAD PH" },
+      { property: "og:title", content: "Looped ITAD PH — Circular IT Asset Disposition Philippines" },
       {
         property: "og:description",
         content:
@@ -349,11 +356,20 @@ function Product() {
 }
 
 function Packages() {
-  const tiers = [
+  /*const tiers = [
     { name: "Laptops", units: "15", highlight: false },
     { name: "Desktops", units: "5", highlight: true },
     { name: "Monitors", units: "5", highlight: false },
     { name: "Peripherals", units: "3", highlight: false },
+  ];*/
+  const shots = [
+    { src: productX556U, title: "ASUS X556U", model: "X556U",condition:"Best", newprice: "6,500", oldprice: "10,000", discount: "35", desc:"INTEL (R) CORE (TM) I7-7500U CPU @ 2.70 GHZ, 2 GB VRAM, 8.00 GB 2133 MHZ, 932 GB HDD, WINDOWS 11 HOME" },
+    { src: productA1374, title: "MAC MINI 2011", model: "A1347", condition:"Best", newprice: "4,800", oldprice: "6,000", discount: "20", desc:"Model: A1374 2.50 GHZ INTEL CORE I5, AMD RADEON HD 6630M 256 MB, 6.00 GB 1333 MHZ, 119.17 GB SSD, MACOS SIERRA (10.12)" },
+    { src: productA14663, title: "MACBOOK AIR 2017", model: "A1466", condition:"Scrap", newprice: "2,500", oldprice: "10,000", discount: "75", desc:"INTEL CORE I5-5350 1.80 GHZ, INTEL HD GRAPHICS 6000, 8 GB RAM, 121.1 GB, MAC OS MONTEREY (12.7.4)" },
+    { src: productA14662, title: "MACBOOK AIR 2017", model: "A1466", condition:"Standard", newprice: "7,500", oldprice: "10,000", discount: "35", desc:"INTEL CORE I5-5350 1.80GHZ, INTEL HD GRAPHICS 6000, 8GB RAM, 250.8 GB SSD, MAC OS X 10.12" },
+    { src: productA1278, title: "MACBOOK PRO 2012", model: "A1278", condition:"Standard", newprice: "3,000", oldprice: "9,000", discount: "67", desc:"INTEL CORE I5-3210M 2.50 GHZ, INTEL HD GRAPHICS 4000, 8GB DDRR3 1600 MHZ, 256.1 GB SSD, MAC OS CATALINA (10.15.7)" },
+    { src: productA1502, title: "MACBOOK PRO 2015", model: "A1502", condition:"Standard", newprice: "9,000", oldprice: "10,000", discount: "10", desc:"INTEL CORE I5-5257U 2.70 GHZ, INTEL IRIS GRAPHICS 6100, 8 GB 1867 MHZ, 251 GB, MAC OS MONTEREY (12.7.6)" },
+    { src: productA1465, title: "MACBOOK AIR 2012", model: "A1465", condition:"Standard", newprice: "4,250", oldprice: "8,500", discount: "50", desc:"INTEL CORE I5-2467M 1.60GHZ, INTEL HD GRAPHICS 3000, 2GB 1333 MHZ, 60.7 GB SSD, MAC OS X HIGH SIERRA (10.13.6)" },
   ];
   const perks = ["Free dashboard", "Free retirement*", "Free ESG reports"];
   return (
@@ -368,26 +384,57 @@ function Packages() {
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
             We offer fully sanitized and refurbished laptops, desktops, monitors. Every unit is a win for the planet and a tool for someone in need.
           </p>
-          <div>
-            <img className="mt-5 text-lg text-muted-foreground leading-relaxed" src={productLaptop} alt="Refurbished laptops ready for redistribution"/>
+          <div className="max-w-3xl mb-1 text-center mx-auto mt-10 ">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+          <CarouselContent className="-ml-4">
+            {shots.map((s) => (
+              <CarouselItem key={s.title} className="pl-4 md:basis-4/5 lg:basis-3/4">
+                <div className="relative">
+                  <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-[var(--shadow-soft)]">
+                    <img src={s.src} alt={s.title} className="w-block h-auto block" loading="lazy" />
+                    <div className="p-6">
+                      <h3 className="text-2xl font-semibold">{s.title}</h3>
+                      <p className="mt-3 text-1xl font-bold text-primary ">₱{s.newprice}
+                        <span className="ml-2 text-sm font-normal text-muted-foreground  line-through"> ₱{s.oldprice}</span>
+                        <span className="ml-2 text-sm text-background font-normal rounded-sm border border-green-500 bg-green-500 p-2 text-center max-w-xl mx-auto ml-2   "> Save {s.discount}%</span>
+                      </p>
+                      <p className="mt-5 text-xs text-muted-foreground">
+                        Condition: {s.condition}<br></br>
+                      </p>
+                      <p className="mt-3 mb-3  text-xs text-muted-foreground">
+                        Model: {s.model}
+                      </p>
+                      <p className="mt-3 text-xs text-muted-foreground">
+                        {s.desc}
+                      </p>
+                      <div className="mt-5 flex flex-col items-center gap-3">
+                        <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
+                          <a
+                            href="https://sheet.zoho.com/sheet/open/kgeus362de41a9c604cb2907eecf213594f56"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Buy from Looped
+                          </a>
+                        </Button>
+                        <p className="mt-3 mb-3 text-xs text-muted-foreground text-center italic">
+                          Every device is sold 40% cheaper than open market price
+                        </p>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-end gap-2 mt-6">
+            <CarouselPrevious className="static translate-y-0" />
+            <CarouselNext className="static translate-y-0" />
+          </div>
+        </Carousel>
           </div>
         </div>
-       <div className="mt-10 flex flex-col items-center gap-3">
-          <Button asChild size="lg" className="rounded-full shadow-[var(--shadow-soft)]">
-            <a
-              href="https://sheet.zoho.com/sheet/open/kgeus362de41a9c604cb2907eecf213594f56"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Buy from Looped
-            </a>
-          </Button>
-          <p className="text-xs text-muted-foreground text-center italic">
-            Every device is sold 40% cheaper than open market price
-          </p>
-        </div>    
       </div>
-      
     </section>
   );
 }
@@ -555,7 +602,7 @@ function Financials() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-border">
-          <MiniMetric value="89%" label="Equity over capital contributions" />
+          <MiniMetric value="₱56.18K" label="Total equity" />
           <MiniMetric value="25" label="Assets sourced" />
           <MiniMetric value="25.0" label="Refurbishment yield" />
           <MiniMetric value="0%" label="Lost asset rate" />
