@@ -418,7 +418,7 @@ function Packages() {
                           </a>
                         </Button>
                         <p className="mt-3 mb-3 text-xs text-muted-foreground text-center italic">
-                          Every device is sold 40% cheaper than open market price
+                          Every device is sold cheaper than open market price
                         </p>
                        </div>
                     </div>
