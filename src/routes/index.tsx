@@ -602,7 +602,7 @@ function Financials() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-border">
-          <MiniMetric value="₱56.18K" label="Total equity" />
+          <MiniMetric value="90%" label="Self-sufficient" />
           <MiniMetric value="25" label="Assets sourced" />
           <MiniMetric value="25.0" label="Refurbishment yield" />
           <MiniMetric value="0%" label="Lost asset rate" />
