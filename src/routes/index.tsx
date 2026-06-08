@@ -140,10 +140,10 @@ function Nav() {
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#sustainability" className="hover:text-foreground transition-colors">Sustainability</a>
           <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-          <a href="#product" className="hover:text-foreground transition-colors">Solution</a>
+          <a href="#track" className="hover:text-foreground transition-colors">Track Devices</a>
+          <a href="#buy" className="hover:text-foreground transition-colors">Buy Devices</a>
           <a href="#financials" className="hover:text-foreground transition-colors">Model</a>
           <a href="#calculator" className="hover:text-foreground transition-colors">Calculator</a>
-          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild size="sm" className="rounded-full">
@@ -300,7 +300,7 @@ function Product() {
     { src: productRetire, title: "One-click Retirement", desc: "NIST 800-88 compliant data destruction, refurbishment, and NGO redistribution — all logged." },
   ];
   return (
-    <section id="product" className="py-24 md:py-32">
+    <section id="track" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl mb-12">
           <p className="text-sm uppercase tracking-[0.2em] text-primary font-medium mb-3 inline-flex items-center gap-2">
@@ -373,7 +373,7 @@ function Packages() {
   ];
   const perks = ["Free dashboard", "Free retirement*", "Free ESG reports"];
   return (
-    <section id="packages" className="py-24 md:py-32 bg-secondary/40">
+    <section id="buy" className="py-24 md:py-32 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-6">
         
         <div className="max-w-2xl mb-12 text-center mx-auto">
@@ -418,7 +418,7 @@ function Packages() {
                           </a>
                         </Button>
                         <p className="mt-3 mb-3 text-xs text-muted-foreground text-center italic">
-                          Every device is sold cheaper than open market price
+                          Every device is sold 40% cheaper than open market price
                         </p>
                        </div>
                     </div>
